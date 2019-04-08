@@ -373,8 +373,8 @@
 
 		function ivpa_scripts() {
 
-			//wp_enqueue_style( 'ivpa-style', self::$url_path . '/assets/css/style' . ( is_rtl() ? '-rtl' : '' ) . '.css', false, self::$version );
-			wp_enqueue_style( 'ivpa-style', self::$url_path . '/assets/css/style' . ( is_rtl() ? '-rtl' : '' ) . '.min.css', false, self::$version );
+			wp_enqueue_style( 'ivpa-style', self::$url_path . '/assets/css/style' . ( is_rtl() ? '-rtl' : '' ) . '.css', false, self::$version );
+			//wp_enqueue_style( 'ivpa-style', self::$url_path . '/assets/css/style' . ( is_rtl() ? '-rtl' : '' ) . '.min.css', false, self::$version );
 
 			wp_register_script( 'ivpa-scripts', self::$url_path .'/assets/js/scripts.js', array( 'jquery', 'hoverIntent', 'wp-util' ), self::$version, true );
 			wp_enqueue_script( 'ivpa-scripts' );
@@ -582,24 +582,24 @@
 
 						case 'ivpa_border' :
 					?>
-							.ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active {
+							._ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active {
 								border-color:<?php echo $curr['custom']['normal']; ?>;
 								color:<?php echo $curr['custom']['normal']; ?>;
 							}
-							.ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_clicked,
-							.ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_clicked.ivpa_outofstock {
+							._ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_clicked,
+							._ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_clicked.ivpa_outofstock {
 								border-color:<?php echo $curr['custom']['active']; ?>;
 								color:<?php echo $curr['custom']['active']; ?>;
 							}
-							.ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_disabled {
+							._ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_disabled {
 								border-color:<?php echo $curr['custom']['disabled']; ?>;
 								color:<?php echo $curr['custom']['disabled']; ?>;
 							}
-							.ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_outofstock {
+							._ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_outofstock {
 								border-color:<?php echo $curr['custom']['outofstock']; ?>;
 								color:<?php echo $curr['custom']['outofstock']; ?>;
 							}
-							.ivpa-content .<?php echo $str; ?>.ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_outofstock:after {
+							._ivpa-content .<?php echo $str; ?>.ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_outofstock:after {
 								background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xml%3Aspace%3D%22preserve%22%20width%3D%2232px%22%20height%3D%2232px%22%20style%3D%22shape-rendering%3AgeometricPrecision%3B%20text-rendering%3AgeometricPrecision%3B%20image-rendering%3AoptimizeQuality%3B%20fill-rule%3Aevenodd%3B%20clip-rule%3Aevenodd%22%20viewBox%3D%220%200%201181%201181%22%20preserveAspectRatio%3D%22none%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%3E%0A%3Cdefs%3E%0A%09%3Cstyle%20type%3D%22text/css%22%3E%0A%09%3C%21%5BCDATA%5B%0A%09%09.fil0%20%7Bfill%3A%23<?php echo substr( $curr['custom']['outofstock'], 1 ); ?>%3Bfill-rule%3Anonzero%3Bpaint-order%3Astroke%3Bstroke%3A%23<?php echo substr( $curr['custom']['outofstock'], 1 ); ?>%3Bstroke-width%3A5%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3B%7D%0A%09%5D%5D%3E%0A%09%3C/style%3E%0A%3C/defs%3E%0A%3Cg%3E%0A%09%3Cpolygon%20class%3D%22fil0%22%20points%3D%221175.11%2C1181%20590.5%2C596.391%205.89083%2C1181%20-0%2C1181%20-0%2C1175.11%20584.609%2C590.5%20-0%2C5.89083%20-0%2C0%205.89083%2C0%20590.5%2C584.609%201175.11%2C0%201181%2C0%201181%2C5.89083%20596.391%2C590.5%201181%2C1175.11%201181%2C1181%20%22/%3E%0A%3C/g%3E%0A%3C/svg%3E');
 							}
 					<?php
@@ -609,17 +609,17 @@
 						case 'ivpa_background' :
 						case 'ivpa_round' :
 					?>
-							.ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active {
+							._ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active {
 								background-color:<?php echo $curr['custom']['normal']; ?>;
 							}
-							.ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_clicked,
-							.ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_clicked.ivpa_outofstock {
+							._ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_clicked,
+							._ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_clicked.ivpa_outofstock {
 								background-color:<?php echo $curr['custom']['active']; ?>;
 							}
-							.ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_disabled {
+							._ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_disabled {
 								background-color:<?php echo $curr['custom']['disabled']; ?>;
 							}
-							.ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_outofstock {
+							._ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_outofstock {
 								background-color:<?php echo $curr['custom']['outofstock']; ?>;
 							}
 					<?php
@@ -765,8 +765,10 @@
 
 				echo str_replace( '%%%JSON_REPLACE_IVPA%%%', esc_attr( json_encode( $available_variations ) ), $cached_html );
 
+
 			}
 			else {
+
 				if ( self::$settings['wc_settings_ivpa_simple_support'] == 'none' && !$product->is_type( 'variable' ) ) {
 					return '';
 				}
@@ -892,7 +894,7 @@
 				}
 
 				if ( $curr_is_loop == 'single' ) {
-					$curr_add_elements = 'id="ivpa-content" class="ivpa-register' . ( self::$settings['wc_settings_ivpa_step_selection'] == 'yes' ? ' ivpa-stepped' : '' ) . ( self::$settings['wc_settings_ivpa_disable_unclick'] == 'yes' ? ' ivpa-disableunclick' : '' ) . '"';
+					$curr_add_elements = 'id="_ivpa-content" class="ivpa-content ivpa-content-id ivpa-' .get_the_ID().' ivpa-register' . ( self::$settings['wc_settings_ivpa_step_selection'] == 'yes' ? ' ivpa-stepped' : '' ) . ( self::$settings['wc_settings_ivpa_disable_unclick'] == 'yes' ? ' ivpa-disableunclick' : '' ) . '"';
 
 					if ( $product->is_type( 'variable' ) ) {
 						$curr_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
@@ -913,12 +915,13 @@
 				}
 
 				$curr_add_elements .= ' data-id="' . get_the_ID() . '"';
+				$curr_add_elements .= ' data-id="' . get_the_ID() . '"';
 
 				ob_start();
 
 			?>
 				<div <?php echo $curr_add_elements; ?> data-variations="<?php echo '%%%JSON_REPLACE_IVPA%%%'; ?>"<?php echo ( self::ivpa_wpml_language() !== false ? ' data-lang="' . ICL_LANGUAGE_CODE . '"' : '' ); ?> data-type="<?php echo esc_attr( $product->get_type() ); ?>">
-					<div class="ivpa-hidden-price">
+					<div class="ivpa-hidden-price _woocommerce-variation-price">
 					<?php
 						/*$price_html = $product->get_price_html();*/
 						if ( $curr_is_loop == 'loop' ) {
@@ -1003,24 +1006,24 @@
 							case 'ivpa_border' :
 								ob_start();
 						?>
-								#ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active {
+								#_ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active {
 									border-color:<?php echo $curr['custom']['normal']; ?>;
 									color:<?php echo $curr['custom']['normal']; ?>;
 								}
-								#ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_clicked,
-								#ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_clicked.ivpa_outofstock {
+								#_ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_clicked,
+								#_ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_clicked.ivpa_outofstock {
 									border-color:<?php echo $curr['custom']['active']; ?>;
 									color:<?php echo $curr['custom']['active']; ?>;
 								}
-								#ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_disabled {
+								#_ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_disabled {
 									border-color:<?php echo $curr['custom']['disabled']; ?>;
 									color:<?php echo $curr['custom']['disabled']; ?>;
 								}
-								#ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_outofstock {
+								#_ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_outofstock {
 									border-color:<?php echo $curr['custom']['outofstock']; ?>;
 									color:<?php echo $curr['custom']['outofstock']; ?>;
 								}
-								#ivpa-content .<?php echo $str; ?>.ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_outofstock:after {
+								#_ivpa-content .<?php echo $str; ?>.ivpa_text.ivpa_border .ivpa_term.ivpa_active.ivpa_outofstock:after {
 									background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xml%3Aspace%3D%22preserve%22%20width%3D%2232px%22%20height%3D%2232px%22%20style%3D%22shape-rendering%3AgeometricPrecision%3B%20text-rendering%3AgeometricPrecision%3B%20image-rendering%3AoptimizeQuality%3B%20fill-rule%3Aevenodd%3B%20clip-rule%3Aevenodd%22%20viewBox%3D%220%200%201181%201181%22%20preserveAspectRatio%3D%22none%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%3E%0A%3Cdefs%3E%0A%09%3Cstyle%20type%3D%22text/css%22%3E%0A%09%3C%21%5BCDATA%5B%0A%09%09.fil0%20%7Bfill%3A%23<?php echo substr( $curr['custom']['outofstock'], 1 ); ?>%3Bfill-rule%3Anonzero%3Bpaint-order%3Astroke%3Bstroke%3A%23<?php echo substr( $curr['custom']['outofstock'], 1 ); ?>%3Bstroke-width%3A5%3Bstroke-linecap%3Abutt%3Bstroke-linejoin%3Amiter%3B%7D%0A%09%5D%5D%3E%0A%09%3C/style%3E%0A%3C/defs%3E%0A%3Cg%3E%0A%09%3Cpolygon%20class%3D%22fil0%22%20points%3D%221175.11%2C1181%20590.5%2C596.391%205.89083%2C1181%20-0%2C1181%20-0%2C1175.11%20584.609%2C590.5%20-0%2C5.89083%20-0%2C0%205.89083%2C0%20590.5%2C584.609%201175.11%2C0%201181%2C0%201181%2C5.89083%20596.391%2C590.5%201181%2C1175.11%201181%2C1181%20%22/%3E%0A%3C/g%3E%0A%3C/svg%3E');
 								}
 						<?php
@@ -1032,17 +1035,17 @@
 							case 'ivpa_round' :
 								ob_start();
 						?>
-								#ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active {
+								#_ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active {
 									background-color:<?php echo $curr['custom']['normal']; ?>;
 								}
-								#ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_clicked,
-								#ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_clicked.ivpa_outofstock {
+								#_ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_clicked,
+								#_ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_clicked.ivpa_outofstock {
 									background-color:<?php echo $curr['custom']['active']; ?>;
 								}
-								#ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_disabled {
+								#_ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_disabled {
 									background-color:<?php echo $curr['custom']['disabled']; ?>;
 								}
-								#ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_outofstock {
+								#_ivpa-content .<?php echo $str; ?>[data-attribute="<?php echo $v; ?>"].ivpa_text .ivpa_term.ivpa_active.ivpa_outofstock {
 									background-color:<?php echo $curr['custom']['outofstock']; ?>;
 								}
 						<?php
@@ -1466,6 +1469,7 @@
 				$html = trim( ob_get_clean() );
 
 				echo str_replace( '%%%JSON_REPLACE_IVPA%%%', esc_attr( json_encode( $available_variations ) ), $html );
+				//echo json_encode( $available_variations );
 
 				if ( empty( $_REQUEST ) && self::$settings['wc_settings_ivpa_use_caching'] == 'yes' ) {
 					update_post_meta( get_the_ID(), '_ivpa_cached_' . $curr_is_loop . '_' . get_locale(), $html );

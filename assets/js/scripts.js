@@ -7,6 +7,7 @@
 
 "use strict";
 
+
 	var ivpa_strings = {};
 
 	ivpa_strings.variable = typeof ivpa !== 'undefined' ? ivpa.localization.variable : '';
@@ -144,6 +145,9 @@
 	}
 
 	var ivpaProcessing = false;
+// dgamoni
+
+//dgamoni end	
 	$(document).on( 'click', ivpaElements, function() {
 
 		if ( ivpaProcessing === true ) {
@@ -167,9 +171,29 @@
 
 		var curr_el = curr_this;
 		var curr_el_term = curr_el.attr('data-term');
+		
 
 		var curr = curr_el.closest('.ivpa_attribute');
 		var curr_attr = curr.attr('data-attribute');
+
+
+// dgamoni fix		
+		//console.log(curr_element.attr('data-id'));
+		//console.log(curr_el_term);
+		//console.log(curr_attr);
+		var currid = curr_element.attr('data-id');
+		if ( currid && curr_el_term && curr_attr ) {
+			$('#product-'+currid+' #'+curr_attr+'').val(curr_el_term);
+			$('#product-'+currid+' #'+curr_attr+'').trigger('change');
+		}
+		var newprice = $('#product-'+currid+' .woocommerce-variation-price').html();
+		//console.log(newprice);
+		if ( newprice )	{
+			$('#product-'+currid+' .ivpa-hidden-price').html(newprice);
+			$('#product-'+currid+' .ivpa-prices-add').html(newprice);
+		}	
+// dgamoni fix end
+
 
 		var main = curr.closest('.ivpa-register');
 
