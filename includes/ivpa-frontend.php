@@ -1253,8 +1253,16 @@
 										$curr_add_class = ( sanitize_title( $b->slug ) == sanitize_title( $selected_attr ) ? ' ivpa_clicked' : '' );
 									}
 
+									// dgamoni lapas_full_screen_image
+									if ( $curr['attr'] == 'pa_lapas' ) {
+										$lapas_full_screen_image = 'data-lapas="' . get_field( 'lapas_full_screen_image', 'term_' . $b->term_id ) . '" data-productid="' . get_the_ID() . '"';
+										$term_lapas = 'ivpa_term_pa_lapas';
+									} else {
+										$lapas_full_screen_image = '';
+										$term_lapas = '';
+									}
 								?>
-									<span class="ivpa_term ivpa_active<?php echo $curr_add_class; ?>" data-term="<?php echo $b->slug; ?>"<?php echo $curr_is_loop == 'single' && isset( $curr['size'] ) ? ' style="width:' . $curr['size'] . 'px;"' : '' ; ?>>
+									<span class="ivpa_term ivpa_active<?php echo $curr_add_class; ?> <?php echo $term_lapas;?>" <?php echo $lapas_full_screen_image; ?> data-term="<?php echo $b->slug; ?>"<?php echo $curr_is_loop == 'single' && isset( $curr['size'] ) ? ' style="width:' . $curr['size'] . 'px;"' : '' ; ?>>
 										<img src="<?php echo isset( $curr['custom'], $curr['custom'][$b->slug] ) ? esc_url( $curr['custom'][$b->slug] ) : ''; ?>" alt="<?php echo esc_attr( $b->name ); ?>" />
 									<?php
 										self::add_price_html( $curr['attr'], ( isset( $curr['price'][$b->slug] ) ? $curr['price'][$b->slug] : '' ), false, $curr_is_loop );
